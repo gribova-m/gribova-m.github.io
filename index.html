@@ -20,20 +20,35 @@
   </head>
   <body>    
 
-    <div class="main">
+    <a href="#main-nav-link" class="main-link">
+      <span></span>
+    </a>
+
+    <div class="main-nav main-nav-link">
+      <ul class="main-nav-list">
+        <li><a href="#main">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="main" id="main">
       <div class="main-overlay"></div>
       <div class="main-header">
         <img src="img/logo.png" alt="" class="main-logo">
         <nav class="main-nav">
           <ul class="main-nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#main">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
+      
       <div class="main-content">
         <span>Welcome To Our Studio!</span>
         <h1>It’s nice to Meet you</h1>
@@ -42,7 +57,7 @@
     </div>
     
 
-    <div class="services">
+    <div class="services" id="services">
       <div class="services-header">
         <h3>Services</h3>
         <p>Proin iaculis purus consequat sem cure.</p>
@@ -68,7 +83,7 @@
       </div>
     </div>
 
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="portfolio-header">
         <h3>Our portfolio</h3>
         <p>Proin iaculis purus consequat sem cure.</p>
@@ -122,7 +137,7 @@
     </div>
 
 
-    <div class="about">
+    <div class="about" id="about">
       <div class="about-header">
         <h3>About us</h3>
         <p>Proin iaculis purus consequat sem cure.</p>
@@ -207,7 +222,7 @@
       </div>
     </div>
 
-    <div class="team">
+    <div class="team" id="team">
       <div class="team-header">
         <h3>Our amazing team</h3>
         <p>Proin iaculis purus consequat sem cure.</p>
@@ -257,7 +272,7 @@
       <img src="img/logos/microlancer.png" alt="">
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
       <div class="contact-header">
         <h3>Contact us</h3>
         <p>Proin iaculis purus consequat sem cure.</p>
@@ -292,7 +307,39 @@
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Menu button -->
+    <script>
+      $(document).ready(function(){
+        var link = $('.main-link');
+        var link_active = $('.main-link_active');
+        var main_nav = $('.main-nav-link');
+        var nav_link = $('.main-nav-link a');
+
+        link.click(function(){
+          link.toggleClass('main-link_active');
+          main_nav.toggleClass('main-nav-link_active');
+        });
+        nav_link.click(function(){
+          link.toggleClass('main-link_active');
+          main_nav.toggleClass('main-nav-link_active');
+        });
+      });
+    </script>
+
+    <!-- Menu button when scrolling -->
+    <script>
+      $(document).ready(function(){
+        $(window).on('load scroll',function(){
+          if ($(this).scrollTop() > 300) {
+            $('.main-link').css({'opacity':'1'});
+          }
+          else  {$('.main-link').css({'opacity':'0'});}
+        });
+      });
+    </script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
   </body>
 </html>
