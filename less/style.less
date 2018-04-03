@@ -127,9 +127,10 @@ body {
 			}
 		}
 		&-link {
-			background-color: lighten(@color-main, 15%);
+			background-color: lighten(@color-main, 10%);
 			position: fixed;
 			width: 30vw;
+			min-width: 120px;
 			height: 100vh;
 			z-index: 5;
 			display: flex;
@@ -137,7 +138,7 @@ body {
 			align-items: center;
 			right: -100vw;
 			transition: all 0.5s;
-			opacity: .7;
+			opacity: .8;
 			&_active {
 				right: 0;
 			}
@@ -147,17 +148,18 @@ body {
 				text-align: center;
 				a {
 					display: block;
+					margin: 0 auto;
 					width: 30vw;
-					color: @color-text;
+					color: @color-dark;
 					line-height: 4;
-					font-weight: 100;
 					letter-spacing: 2px;
 					transition: all 0.2s;
 					font-weight: bold;
 					&:hover {			
 						text-decoration: none;
 						width: 30vw;
-						background-color: rgba(255,255,255,.4);
+						color: @color-text;
+						background-color: rgba(255,255,255,.5);
 					}
 				}
 			}
@@ -230,24 +232,24 @@ body {
 		.section-header;
 	}
 	&-name {
+		background-color: #fff;
+		width: 290px;
+		margin: 0px auto 50px auto;
+		padding-bottom: 10px;
+		box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+		
 		span {
 			display: block;
 			margin-top: 25px;
 			font-size: 18px;
 			font-weight: bold;
-			color: @color-dark;			
+			color: @color-dark;		
 		}
 		p {
 			margin-top: 1px;
 			font-size: 14px;
 			font-style: italic;
 		}
-	}
-	&-name {
-		background-color: #fff;
-		width: 290px;
-		margin: 0px auto 50px auto;
-		padding-bottom: 10px;
 	}
 }
 
@@ -460,6 +462,57 @@ body {
 			}
 		}
 	}
+}
+
+
+// Modal
+.modal {
+	&-header {
+		text-align: left;
+		h2 {
+			display: inline;
+			margin-top: 0;
+			margin-left: 35px;
+		}
+		&-line {
+			display: inline-block;
+			margin: 0 15px;
+			height: 14px;
+			width: 1px;
+			background-color: rgba(0,0,0,.3);
+		}
+		p {
+			display: inline;
+			margin: -10px 0 0px 0;
+		}
+		button {
+			float: right;
+			background-color: @color-main;
+			border: none;
+			border-radius: 50%;
+			height: 35px;
+			width: 35px;
+			box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+			span {
+				font-size: 25px;
+				color: @color-text;
+			}
+			&:hover {
+				background-color: darken(@color-main, 12%);
+			}
+		}
+	}
+	img {
+		margin-top: 15px;
+		width: 90%;
+		max-width: 290px;
+		border-radius: 2%;
+	}
+	&-body {
+		p {
+			text-align: left;
+		}
+	}	
 }
 
 

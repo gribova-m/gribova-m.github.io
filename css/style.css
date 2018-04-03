@@ -117,9 +117,10 @@ body p {
   transition: all .3s;
 }
 .main-nav-link {
-  background-color: #fee282;
+  background-color: #fedd69;
   position: fixed;
   width: 30vw;
+  min-width: 120px;
   height: 100vh;
   z-index: 5;
   display: flex;
@@ -127,7 +128,7 @@ body p {
   align-items: center;
   right: -100vw;
   transition: all 0.5s;
-  opacity: .7;
+  opacity: .8;
 }
 .main-nav-link_active {
   right: 0;
@@ -139,10 +140,10 @@ body p {
 }
 .main-nav-link ul a {
   display: block;
+  margin: 0 auto;
   width: 30vw;
-  color: #777777;
+  color: #222222;
   line-height: 4;
-  font-weight: 100;
   letter-spacing: 2px;
   transition: all 0.2s;
   font-weight: bold;
@@ -150,7 +151,8 @@ body p {
 .main-nav-link ul a:hover {
   text-decoration: none;
   width: 30vw;
-  background-color: rgba(255, 255, 255, 0.4);
+  color: #777777;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .main-content {
   position: relative;
@@ -236,6 +238,13 @@ body p {
   margin-top: -30px;
   margin-bottom: 70px;
 }
+.portfolio-name {
+  background-color: #fff;
+  width: 290px;
+  margin: 0px auto 50px auto;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
 .portfolio-name span {
   display: block;
   margin-top: 25px;
@@ -247,12 +256,6 @@ body p {
   margin-top: 1px;
   font-size: 14px;
   font-style: italic;
-}
-.portfolio-name {
-  background-color: #fff;
-  width: 290px;
-  margin: 0px auto 50px auto;
-  padding-bottom: 10px;
 }
 .about {
   position: relative;
@@ -488,6 +491,50 @@ body p {
 .footer-link a:hover {
   background-color: #ffffff;
   color: #222222;
+}
+.modal-header {
+  text-align: left;
+}
+.modal-header h2 {
+  display: inline;
+  margin-top: 0;
+  margin-left: 35px;
+}
+.modal-header-line {
+  display: inline-block;
+  margin: 0 15px;
+  height: 14px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-header p {
+  display: inline;
+  margin: -10px 0 0px 0;
+}
+.modal-header button {
+  float: right;
+  background-color: #fed136;
+  border: none;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+.modal-header button span {
+  font-size: 25px;
+  color: #777777;
+}
+.modal-header button:hover {
+  background-color: #f6bf01;
+}
+.modal img {
+  margin-top: 15px;
+  width: 90%;
+  max-width: 290px;
+  border-radius: 2%;
+}
+.modal-body p {
+  text-align: left;
 }
 @media (min-width: 0px) and (max-width: 991px) {
   .about .row:nth-child(odd) {

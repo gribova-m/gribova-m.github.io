@@ -90,44 +90,44 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-4">            
+          <div class="col-md-4">
             <div class="portfolio-name">
-              <img src="img/portfolio/1.jpg" alt="">
+              <a href="#work" class="portfolio-modal" data-toggle="modal" data-target='#work' data-work='work-1'><img src="img/portfolio/1.jpg" alt=""></a>
               <span>Ebony & Ivory</span>
               <p>Branding</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="portfolio-name">
-              <img src="img/portfolio/2.jpg" alt="">
+              <a href="#work" class="portfolio-modal" data-toggle="modal" data-target='#work' data-work='work-2'><img src="img/portfolio/2.jpg" alt=""></a>
               <span>Smart Stationary</span>
               <p>Print Design</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="portfolio-name">              
-              <img src="img/portfolio/3.jpg" alt="">
+            <div class="portfolio-name">
+              <a href="#work" class="portfolio-modal" data-toggle="modal" data-target='#work' data-work='work-3'><img src="img/portfolio/3.jpg" alt=""></a>
               <span>Clever Poster</span>
               <p>Print Design</p>
             </div>
           </div>
-          <div class="col-md-4">            
+          <div class="col-md-4">
             <div class="portfolio-name">
-              <img src="img/portfolio/4.jpg" alt="">
+              <a href="#work" class="portfolio-modal" data-toggle="modal" data-target='#work' data-work='work-4'><img src="img/portfolio/4.jpg" alt=""></a>
               <span>Vinyl Record</span>
               <p>Product Mock-Up</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="portfolio-name">
-              <img src="img/portfolio/5.jpg" alt="">
+              <a href="#work" class="portfolio-modal" data-toggle="modal" data-target='#work' data-work='work-5'><img src="img/portfolio/5.jpg" alt=""></a>
               <span>Treehouse Template</span>
               <p>Web Design</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="portfolio-name">              
-              <img src="img/portfolio/6.jpg" alt="">
+            <div class="portfolio-name">
+              <a href="#work" class="portfolio-modal" data-toggle="modal" data-target='#work' data-work='work-6'><img src="img/portfolio/6.jpg" alt=""></a>
               <span>Burned Logo</span>
               <p>Branding</p>
             </div>
@@ -304,11 +304,22 @@
       </div>
       
     </div>
+
+
+    <!-- Modal (Bootstrap) -->
+    <div class="modal fade" id="work" role="dialog">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          
+        </div>
+      </div>
+    </div>
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Menu button -->
     <script>
@@ -340,6 +351,17 @@
         });
       });
     </script>
-    <!-- <script src="js/bootstrap.min.js"></script> -->
+    
+    <!-- Modal -->
+    <script>
+      $(document).ready(function(){
+        var link = $('.portfolio-modal');
+        link.on('click', function(event) {
+          var work = $(this).attr('data-work');
+          $('.modal-content').load(work + '.html');
+        });
+      });
+    </script>
+    
   </body>
 </html>
