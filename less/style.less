@@ -85,13 +85,13 @@ body {
 	background-size: cover;
 	height: 100vh;
 	width: 100%;
-	min-height: 530px;
+	min-height: 600px;
 	&-overlay {
 		position: absolute;
 		background: rgba(0,0,0,.5);
 		height: 100vh;
 		width: 100%;
-		min-height: 530px;
+		min-height: 600px;
 		z-index: 1;
 	}
 	&-header {
@@ -374,6 +374,7 @@ body {
 .logos {
 	.section;
 	margin-bottom: -50px;
+	margin-left: -27px;
 	img {
 		margin-bottom: 50px;
 		margin-left: 50px;
@@ -402,18 +403,24 @@ body {
 			border-radius: 3px;
 			padding: 15px;
 			margin-bottom: 25px;
-			margin-right: 20px;			
-			text-transform: uppercase;
-			font-size: 12px;
-			font-weight: bold;			
+			margin-right: 20px;
+			font-size: 14px;
+			font-weight: bold;
+			&:valid:not(:placeholder-shown) {
+				border: 2px solid green;
+			}
+			&:invalid:not(:placeholder-shown) {
+				border: 2px solid red;
+			}
 		}
 		.field {
 			width: 95%;
+			height: 50px;
 		}
 		.message {
 			display: block;
 			float: right;
-			height: 203px;
+			height: 200px;
 		}
 	}
 	.btn {
@@ -566,6 +573,7 @@ body {
 			text-align: center;
 			ul {
 				padding-left: 0px;
+				margin-left: -25px;
 
 				li {
 					line-height: 35px;
@@ -593,7 +601,7 @@ body {
 				margin: 0 auto;
 			}
 			.message {
-				width: 65%;
+				width: 62%;
 				float: none;
 				margin: 0 auto 20px auto;
 			}

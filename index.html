@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -279,13 +279,13 @@
         <p>Proin iaculis purus consequat sem cure.</p>
       </div>
       <div class="container">
-        <form class="contact-form" action="#">
+        <form class="contact-form" onsubmit="alert('Thanks for the message sent!');form.submit()" action="/">
           <div class="contact-form-block">
-            <input class="contact-form-input field" id='input-name' placeholder="Your name*">
-            <input class="contact-form-input field" id='input-email' placeholder="Your e-mail*">
-            <input class="contact-form-input field" id='input-subject' placeholder="Subject*">
+            <input class="contact-form-input field" id='input-name' type="text" placeholder="Your name*" required>
+            <input class="contact-form-input field" id='input-email' type='email' placeholder="Your e-mail*" required>
+            <input class="contact-form-input field" id='input-subject' type="text" placeholder="Subject*" required>
           </div>          
-          <textarea class="contact-form-input message" id='input-massage' placeholder="Your message*"></textarea>
+          <textarea class="contact-form-input message" id='input-massage' placeholder="Your message*" required></textarea>
           <button class="btn" type="submit">Send message</button>
         </form>
       </div>      
@@ -368,6 +368,7 @@
     <!-- Animation -->
     <script>
       new WOW().init();
-    </script>
+    </script>    
+
     </body>
 </html>

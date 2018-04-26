@@ -28,7 +28,7 @@ body p {
   background-size: cover;
   height: 100vh;
   width: 100%;
-  min-height: 530px;
+  min-height: 600px;
 }
 .main-link {
   z-index: 6;
@@ -82,7 +82,7 @@ body p {
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100%;
-  min-height: 530px;
+  min-height: 600px;
   z-index: 1;
 }
 .main-header {
@@ -396,6 +396,7 @@ body p {
   width: 100%;
   padding: 90px 0;
   margin-bottom: -50px;
+  margin-left: -27px;
 }
 .logos img {
   margin-bottom: 50px;
@@ -436,17 +437,23 @@ body p {
   padding: 15px;
   margin-bottom: 25px;
   margin-right: 20px;
-  text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
+}
+.contact-form-input:valid:not(:placeholder-shown) {
+  border: 2px solid green;
+}
+.contact-form-input:invalid:not(:placeholder-shown) {
+  border: 2px solid red;
 }
 .contact-form .field {
   width: 95%;
+  height: 50px;
 }
 .contact-form .message {
   display: block;
   float: right;
-  height: 203px;
+  height: 200px;
 }
 .contact .btn {
   display: block;
@@ -573,6 +580,7 @@ body p {
   }
   .main-nav ul {
     padding-left: 0px;
+    margin-left: -25px;
   }
   .main-nav ul li {
     line-height: 35px;
@@ -589,7 +597,7 @@ body p {
     margin: 0 auto;
   }
   .contact-form .message {
-    width: 65%;
+    width: 62%;
     float: none;
     margin: 0 auto 20px auto;
   }
