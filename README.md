@@ -1,2 +1,2 @@
 # gribova-m.github.io
-Мой первый проект
+Сайт доступен по ссылке https://gribova-m.github.io/
