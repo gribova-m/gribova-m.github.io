@@ -29,6 +29,7 @@ body p {
   height: 100vh;
   width: 100%;
   min-height: 600px;
+  margin-top: -70px;
 }
 .main-link {
   z-index: 6;
@@ -87,8 +88,10 @@ body p {
 }
 .main-header {
   padding-top: 20px;
+  height: 70px;
+  width: 100%;
 }
-.main img {
+.main-header img {
   position: relative;
   z-index: 2;
   margin-left: 8%;
@@ -159,7 +162,7 @@ body p {
   z-index: 2;
   width: 100%;
   margin: 0 auto;
-  margin-top: 15%;
+  padding-top: 15%;
 }
 .main-content span {
   font-size: 34px;
@@ -238,21 +241,21 @@ body p {
   margin-top: -30px;
   margin-bottom: 70px;
 }
-.portfolio-name {
+.portfolio-item {
   background-color: #fff;
   width: 290px;
   margin: 0px auto 50px auto;
   padding-bottom: 10px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
-.portfolio-name span {
+.portfolio-item span {
   display: block;
   margin-top: 25px;
   font-size: 18px;
   font-weight: bold;
   color: #222222;
 }
-.portfolio-name p {
+.portfolio-item p {
   margin-top: 1px;
   font-size: 14px;
   font-style: italic;
@@ -504,7 +507,6 @@ body p {
 }
 .modal-header h2 {
   display: inline;
-  margin-top: 0;
   margin-left: 35px;
 }
 .modal-header-line {
