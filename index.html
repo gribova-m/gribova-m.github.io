@@ -324,53 +324,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
-
-    <!-- Menu button -->
-    <script>
-      $(document).ready(function(){
-        var link = $('.main-link');
-        var link_active = $('.main-link_active');
-        var main_nav = $('.main-nav-link');
-        var nav_link = $('.main-nav-link a');
-
-        link.click(function(){
-          link.toggleClass('main-link_active');
-          main_nav.toggleClass('main-nav-link_active');
-        });
-        nav_link.click(function(){
-          link.toggleClass('main-link_active');
-          main_nav.toggleClass('main-nav-link_active');
-        });
-      });
-    </script>
-
-    <!-- Menu button when scrolling -->
-    <script>
-      $(document).ready(function(){
-        $(window).on('load scroll',function(){
-          if ($(this).scrollTop() > 300) {
-            $('.main-link').css({'opacity':'1'});
-          }
-          else  {$('.main-link').css({'opacity':'0'});}
-        });
-      });
-    </script>
-    
-    <!-- Modal -->
-    <script>
-      $(document).ready(function(){
-        var link = $('.portfolio-modal');
-        link.on('click', function(event) {
-          var work = $(this).attr('data-work');
-          $('.modal-content').load(work + '.html');
-        });
-      });
-    </script>
-    
-    <!-- Animation -->
-    <script>
-      new WOW().init();
-    </script>    
+    <script src="js/script.js"></script>
 
     </body>
 </html>
